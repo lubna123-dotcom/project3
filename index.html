@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VogueVibe - Dress Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #222;
+      color: #fff;
+      padding: 15px 30px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f8c146;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #f8c146;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: #f8f8f8;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      color: #222;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .gallery {
+      padding: 40px 20px;
+      background: #fff;
+    }
+
+    .gallery h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fafafa;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 250px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 40px 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+ .contact-image {
+  flex: 1 1 300px;
+  background: url('icon.jpg') center/cover no-repeat;
+  min-height: 400px;
+}
+
+
+
+
+    .contact-form {
+      flex: 1 1 300px;
+      background: #fff;
+      padding: 30px;
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background: #f8c146;
+      color: #000;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .contact-form button:hover {
+      background: #e0a800;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .social-icons {
+      margin-bottom: 10px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #f8c146;
+    }
+
+    @media (max-width: 768px) {
+      .cards, .contact-section {
+        flex-direction: column;
+      }
+
+      .card {
+        width: 90%;
+        margin: auto;
+      }
+
+      .contact-image, .contact-form {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">VogueVibe</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Welcome to VogueVibe</h1>
+    <p>Your one-stop destination for modern, stylish, and elegant dresses that fit every vibe.</p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Our Dress Gallery</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="summer.jpg" alt="Dress 1" />
+        <div class="card-title">Summer Breeze</div>
+      </div>
+      <div class="card">
+        <img src="rose.jpg" alt="Dress 2" />
+        <div class="card-title">Elegant Rose</div>
+      </div>
+      <div class="card">
+        <img src="midnight.jpg" alt="Dress 3" />
+        <div class="card-title">Midnight Charm</div>
+      </div>
+      <div class="card">
+        <img src="black.jpg" alt="Dress 4" />
+        <div class="card-title">Classic Black</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-image"></div>
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-telegram"></i></a>
+    </div>
+    <p>&copy; 2025 VogueVibe. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
